@@ -7,8 +7,8 @@ const { esRolValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-
 const {
 validarCampos,
     validarJWT,
-    esAdminRole,
-    tieneRole
+    esAdminRol,
+    tieneRol
 } = require('../middlewares');
 
 const router = Router();
@@ -34,8 +34,8 @@ router.post('/', [
 
 router.delete('/:id',[
     validarJWT,
-    // esAdminRole,
-    tieneRole('ADMIN_ROL', 'VENTAS_ROL','OTRO_ROL'),
+    // esAdminRol,
+    tieneRol('ADMIN_ROL', 'VENTAS_ROL','OTRO_ROL'),
     check('id', 'No es un ID válido').isMongoId(),
     check('id').custom( existeUsuarioPorId ),
     validarCampos
