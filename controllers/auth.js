@@ -53,8 +53,9 @@ const login = async(req, res = response) => {
 
 }
 
-const googleSignin = async ( req, res = response) => {
-    
+
+const googleSignin = async(req, res = response) => {
+
     const { id_token } = req.body;
     
     try {
@@ -98,6 +99,7 @@ const googleSignin = async ( req, res = response) => {
         })
 
     }
+
 
 
 }

@@ -1,5 +1,4 @@
-const { Schema, model } = require("mongoose")
-
+const { Schema, model } = require('mongoose');
 
 const RolSchema = Schema({
     rol: {
@@ -8,4 +7,5 @@ const RolSchema = Schema({
     }
 });
 
-module.exports = model( 'Rol', RolSchema);
+
+module.exports = model( 'Rol', RolSchema );
